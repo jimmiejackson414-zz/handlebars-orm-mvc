@@ -1,4 +1,4 @@
-var orm = require('..config/orm.js');
+var orm = require('../config/orm.js');
 
 var burger = {
 	all: function(cb) {
@@ -11,8 +11,8 @@ var burger = {
 			cb(res);
 		});
 	},
-	update: function(objColVals, devoured, cb) {
-		orm.update('burgers', objColVals, devoured, function(res){
+	update: function(objColVals, condition, cb) {
+		orm.update('burgers', objColVals, condition, function(res){
 			cb(res);
 		});
 	}
